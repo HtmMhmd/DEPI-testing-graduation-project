@@ -1,0 +1,6 @@
+com\swaglabs\tests\CheckoutTests.class
+com\swaglabs\tests\LoginTests.class
+com\swaglabs\tests\SwagLabsTestSuite.class
+com\swaglabs\tests\NavigationTests.class
+com\swaglabs\tests\CartTests.class
+com\swaglabs\tests\ProductTests.class
