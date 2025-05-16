@@ -8,8 +8,22 @@ REM Set Java and Maven environment if needed
 REM SET JAVA_HOME=C:\path\to\your\java
 REM SET PATH=%JAVA_HOME%\bin;%PATH%
 
-echo Running all tests...
-call mvn clean test -Dtest=AllTests
+REM Check for command line arguments
+set HEADLESS=false
+set TEST_CLASS=AllTests
+
+:PARSE_ARGS
+if "%~1"=="" goto AFTER_ARGS
+if /i "%~1"=="--headless" set HEADLESS=true
+if /i "%~1"=="--test" set TEST_CLASS=%~2 & shift
+shift
+goto PARSE_ARGS
+:AFTER_ARGS
+
+echo Running %TEST_CLASS% tests with headless mode: %HEADLESS%...
+
+REM Run the tests with the specified options
+call mvn clean test -Dtest=%TEST_CLASS% -Dheadless=%HEADLESS%
 echo.
 
 echo ======================================================

@@ -27,11 +27,17 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.10.1</version>
-            <scope>test</scope>
+            <!-- <scope>test</scope> Scope changed to compile (default) -->
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
             <version>5.10.1</version>
             <scope>test</scope>
         </dependency>
@@ -78,6 +84,14 @@
                     
                     <!-- Test failure ignoring -->
                     <testFailureIgnore>true</testFailureIgnore>
+                    
+                    <!-- System properties -->
+                    <systemPropertyVariables>
+                        <!-- Set to true to run tests in headless mode -->
+                        <headless>false</headless>
+                        <!-- Set to true when running in CI environment -->
+                        <ci>false</ci>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -87,6 +101,14 @@
                 <configuration>
                     <source>11</source>
                     <target>11</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <mainClass>com.swaglabs.utils.TestEnvironmentDiagnostics</mainClass>
                 </configuration>
             </plugin>
         </plugins>

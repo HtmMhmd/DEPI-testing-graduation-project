@@ -3,6 +3,10 @@ package com.swaglabs.tests;
 import com.swaglabs.pages.ParallelLoginPage;
 import com.swaglabs.utils.ThreadLocalWebDriverManager;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import com.swaglabs.utils.TestListener; // Corrected import
+import com.swaglabs.pages.ProductsPage;
+import com.swaglabs.pages.LoginPage;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Test runner for parallel execution of all login tests
  * Demonstrates using the ThreadLocalWebDriverManager and screenshot capture
  */
-@ExtendWith(ParallelTestListener.class)
+@ExtendWith(TestListener.class) // Corrected class name
 public class ParallelLoginTests {
     
     private ParallelLoginPage loginPage;

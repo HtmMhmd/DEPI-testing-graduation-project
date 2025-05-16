@@ -45,10 +45,11 @@ public class ParallelLoginPage extends ParallelBasePage {
         waitForPageLoad(); // Ensure page is fully loaded before proceeding
     }
 
-    public void loginAs(String username, String password) {
+    public ProductsPage loginAs(String username, String password) { // Changed return type to ProductsPage
         enterUsername(username);
         enterPassword(password);
         clickLoginButton();
+        return new ProductsPage(); // Added return statement
     }
 
     public String getErrorMessage() {
