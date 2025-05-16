@@ -4,7 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage {
+/**
+ * LoginPage implementation for parallel test execution
+ */
+public class ParallelLoginPage extends ParallelBasePage {
     // Locators
     @FindBy(id = "user-name")
     private WebElement usernameField;
@@ -37,15 +40,15 @@ public class LoginPage extends BasePage {
         passwordField.sendKeys(password);
     }
 
-    public ProductsPage clickLoginButton() {
+    public void clickLoginButton() {
         loginButton.click();
-        return new ProductsPage();
+        waitForPageLoad(); // Ensure page is fully loaded before proceeding
     }
 
-    public ProductsPage loginAs(String username, String password) {
+    public void loginAs(String username, String password) {
         enterUsername(username);
         enterPassword(password);
-        return clickLoginButton();
+        clickLoginButton();
     }
 
     public String getErrorMessage() {

@@ -18,7 +18,13 @@ The Swag Labs Automation Testing Project is now complete with a comprehensive te
 - Implemented **CheckoutTests** (TC-017 to TC-024) covering the complete checkout flow
 - Implemented **NavigationTests** (TC-025 to TC-032) covering menu navigation and UI testing
 
-### 3. Bug Fixes and Improvements
+### 3. Advanced Features Implementation
+- Added parallel test execution capability using ThreadLocal WebDriver management
+- Implemented automatic screenshot capture for test failures
+- Created CI/CD pipeline configuration using GitHub Actions
+- Added test suite for different user types (standard_user, locked_out_user, etc.)
+
+### 4. Bug Fixes and Improvements
 - Enhanced CheckoutPage.java with improved clickContinue() method using explicit waits
 - Updated Back Home button locator to be more flexible
 - Enhanced NavigationTests.java with proper explicit waits for the hamburger menu

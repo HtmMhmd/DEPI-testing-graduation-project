@@ -1,7 +1,7 @@
 # Swag Labs Automation Testing Project
 
 ## Project Overview
-This project consists of automated tests for the Swag Labs e-commerce website (https://www.saucedemo.com). The test suite covers the complete user journey from login to checkout, including product browsing, cart management, and responsive design testing.
+This project consists of automated tests for the Swag Labs e-commerce website (https://www.saucedemo.com). The test suite covers the complete user journey from login to checkout, including product browsing, cart management, and responsive design testing. The framework supports parallel test execution with automatic screenshot capture for failed tests.
 
 ## Project Structure
 The project follows the Page Object Model (POM) design pattern, which separates the test logic from the UI interaction code:
@@ -9,10 +9,16 @@ The project follows the Page Object Model (POM) design pattern, which separates 
 ```
 src/
 ├── main/java/com/swaglabs/
-│   ├── pages/         # Page objects for each page of the website
-│   └── utils/         # Utility classes like WebDriverManager
-└── test/java/com/swaglabs/
-    └── tests/         # Test classes organized by functionality
+│   ├── pages/                # Page objects for each page of the website
+│   │   ├── BasePage.java     # Regular base page
+│   │   └── ParallelBasePage.java  # Thread-safe base page
+│   └── utils/
+│       ├── WebDriverManager.java   # Regular WebDriver manager
+│       ├── ThreadLocalWebDriverManager.java  # Thread-safe WebDriver manager
+│       └── TestListener.java       # Screenshot capture for failures
+├── test/java/com/swaglabs/
+│   └── tests/                # Test classes organized by functionality
+└── .github/workflows/        # CI/CD pipeline configuration
 ```
 
 ## Technology Stack
@@ -22,6 +28,15 @@ src/
 - **Build Tool**: Maven
 - **WebDriver Management**: WebDriverManager 5.5.3
 - **Browser**: Chrome
+- **CI/CD**: GitHub Actions
+
+## Key Features
+- **Page Object Model**: Clean separation of test logic and UI interaction
+- **Parallel Test Execution**: Run tests concurrently for faster feedback
+- **Screenshot Capture**: Automatic capture of screenshots for failed tests
+- **Retry Logic**: Automatic retries for flaky tests
+- **User Type Testing**: Tests for all user types (standard, locked_out, etc.)
+- **CI/CD Integration**: Automated test execution in GitHub Actions pipeline
 
 ## Test Categories
 The test suite is organized into the following categories:
@@ -31,6 +46,7 @@ The test suite is organized into the following categories:
 3. **Cart Tests**: Adding, removing items, and cart persistence
 4. **Checkout Tests**: Complete purchase flow
 5. **Navigation Tests**: Menu navigation, responsive design, error handling
+6. **User Type Tests**: Testing behavior of different user types (standard, locked out, problem, etc.)
 
 ## Running the Tests
 To run the tests, you need Java and Maven installed. You can use the provided batch file:
@@ -65,6 +81,7 @@ Detailed documentation for each test category can be found in the following file
 - [Cart Tests Documentation](./CartTests.md)
 - [Checkout Tests Documentation](./CheckoutTests.md)
 - [Navigation Tests Documentation](./NavigationTests.md)
+- [User Type Tests Documentation](./UserTypeTests.md)
 
 ## Additional Resources
 - [User Guide](./UserGuide.md) - Instructions for running and maintaining the tests

@@ -1,7 +1,0 @@
-com\swaglabs\pages\CartPage.class
-com\swaglabs\utils\WebDriverManager.class
-com\swaglabs\pages\ProductDetailsPage.class
-com\swaglabs\pages\ProductsPage.class
-com\swaglabs\pages\CheckoutPage.class
-com\swaglabs\pages\BasePage.class
-com\swaglabs\pages\LoginPage.class
