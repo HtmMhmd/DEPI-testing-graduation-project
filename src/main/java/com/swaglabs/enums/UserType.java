@@ -1,26 +1,50 @@
 package com.swaglabs.enums;
 
+/**
+ * Enumeration of user types available in Swag Labs
+ * Each user type represents a different user experience
+ */
 public enum UserType {
-    STANDARD_USER("standard_user", "secret_sauce"),
-    LOCKED_OUT_USER("locked_out_user", "secret_sauce"),
-    PROBLEM_USER("problem_user", "secret_sauce"),
-    PERFORMANCE_GLITCH_USER("performance_glitch_user", "secret_sauce"),
-    ERROR_USER("error_user", "secret_sauce"),
-    VISUAL_USER("visual_user", "secret_sauce");
-
+    STANDARD_USER("standard_user"),
+    LOCKED_OUT_USER("locked_out_user"),
+    PROBLEM_USER("problem_user"),
+    PERFORMANCE_GLITCH_USER("performance_glitch_user"),
+    ERROR_USER("error_user"),
+    VISUAL_USER("visual_user");
+    
     private final String username;
-    private final String password;
-
-    UserType(String username, String password) {
+    private static final String PASSWORD = "secret_sauce";
+    
+    /**
+     * Constructor for UserType enum
+     * @param username The username for this user type
+     */
+    UserType(String username) {
         this.username = username;
-        this.password = password;
     }
-
+    
+    /**
+     * Get the username for this user type
+     * @return The username
+     */
     public String getUsername() {
         return username;
     }
-
+    
+    /**
+     * Get the password for all user types
+     * @return The password
+     */
     public String getPassword() {
-        return password;
+        return PASSWORD;
+    }
+    
+    /**
+     * Return string representation of user type
+     * @return Username string
+     */
+    @Override
+    public String toString() {
+        return username;
     }
 }

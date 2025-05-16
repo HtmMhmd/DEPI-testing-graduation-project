@@ -3,6 +3,7 @@ package com.swaglabs.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import com.swaglabs.enums.UserType;
 
 public class LoginPage extends BasePage {
     // Locators
@@ -58,5 +59,22 @@ public class LoginPage extends BasePage {
 
     public boolean isOnLoginPage() {
         return loginButton.isDisplayed();
+    }
+    
+    /**
+     * Login with a specific user type
+     * @param userType The type of user to login as
+     * @return The Products page if login is successful
+     */
+    public ProductsPage login(UserType userType) {
+        return loginAs(userType.getUsername(), userType.getPassword());
+    }
+    
+    /**
+     * Check if error message is displayed
+     * @return true if error message is displayed
+     */
+    public boolean isErrorDisplayed() {
+        return isElementDisplayed(errorMessageLocator);
     }
 }

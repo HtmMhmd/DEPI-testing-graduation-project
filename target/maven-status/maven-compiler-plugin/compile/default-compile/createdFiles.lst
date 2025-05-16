@@ -1,14 +1,13 @@
 com\swaglabs\utils\TestEnvironmentDiagnostics.class
 com\swaglabs\utils\WebDriverManager$1.class
 com\swaglabs\pages\ProductsPage.class
+com\swaglabs\utils\TestLogger$TestResult.class
 com\swaglabs\enums\UserType.class
 com\swaglabs\pages\CheckoutPage.class
-com\swaglabs\pages\ParallelBasePage.class
 com\swaglabs\utils\WebDriverManager$BrowserType.class
 com\swaglabs\pages\BasePage.class
 com\swaglabs\pages\CartPage.class
 com\swaglabs\utils\WebDriverManager.class
+com\swaglabs\utils\TestLogger.class
 com\swaglabs\pages\ProductDetailsPage.class
-com\swaglabs\pages\ParallelLoginPage.class
-com\swaglabs\utils\ThreadLocalWebDriverManager.class
 com\swaglabs\pages\LoginPage.class
