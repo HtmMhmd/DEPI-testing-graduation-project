@@ -3,6 +3,10 @@ package com.swaglabs.tests;
 import com.swaglabs.pages.*;
 import com.swaglabs.utils.WebDriverManager;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CheckoutTests {
     
+    private WebDriver driver; // Add WebDriver field declaration
     private ProductsPage productsPage;
     private CartPage cartPage;
     private static final String TEST_PRODUCT = "Sauce Labs Backpack";
@@ -20,6 +25,7 @@ public class CheckoutTests {
     public void setup() {
         WebDriverManager.setupDriver();
         WebDriverManager.navigateToBaseUrl();
+        driver = WebDriverManager.getDriver(); // Initialize the WebDriver
         
         // Login, add a product to cart, and navigate to cart page
         LoginPage loginPage = new LoginPage();
@@ -111,22 +117,54 @@ public class CheckoutTests {
     @Test
     @DisplayName("TC-020: Order Summary")
     public void testOrderSummary() {
-        // Proceed to checkout and fill customer information
-        CheckoutPage checkoutPage = cartPage.checkout();
-        checkoutPage.fillCustomerInfo("John", "Doe", "12345")
-                   .clickContinue();
-        
-        // Verify order summary information
-        assertTrue(checkoutPage.isOnCheckoutStepTwo(), 
-                "Should be on checkout overview page");
-        
-        double subtotal = checkoutPage.getSubtotalAmount();
-        double tax = checkoutPage.getTaxAmount();
-        double total = checkoutPage.getTotalAmount();
-        
-        // Verify total equals subtotal + tax (with small delta for floating point comparison)
-        assertEquals(subtotal + tax, total, 0.001, 
-                "Total amount should equal subtotal plus tax");
+        try {
+            // Verify that we're on the cart page and cart has items
+            assertTrue(cartPage.isOnCartPage(), 
+                      "Should be on cart page before proceeding to checkout");
+            assertTrue(cartPage.getNumberOfItemsInCart() > 0,
+                      "Cart should contain at least one item");
+            
+            // Print debug info about the checkout button
+            try {
+                WebElement checkoutBtn = driver.findElement(By.id("checkout"));
+                System.out.println("Checkout button found: " + checkoutBtn.isDisplayed() + ", " + checkoutBtn.isEnabled());
+            } catch (Exception e) {
+                System.out.println("Couldn't find checkout button for debug info: " + e.getMessage());
+                // Try to print the page source for debugging
+                System.out.println("Page source excerpt: " + 
+                   driver.getPageSource().substring(0, Math.min(500, driver.getPageSource().length())));
+            }
+            
+            // Proceed to checkout and fill customer information
+            CheckoutPage checkoutPage = cartPage.checkout();
+            checkoutPage.fillCustomerInfo("John", "Doe", "12345")
+                       .clickContinue();
+            
+            // Verify order summary information
+            assertTrue(checkoutPage.isOnCheckoutStepTwo(), 
+                    "Should be on checkout overview page");
+            
+            double subtotal = checkoutPage.getSubtotalAmount();
+            double tax = checkoutPage.getTaxAmount();
+            double total = checkoutPage.getTotalAmount();
+            
+            // Log the values for debugging
+            System.out.println("Subtotal: $" + subtotal);
+            System.out.println("Tax: $" + tax);
+            System.out.println("Total: $" + total);
+            
+            // Verify total equals subtotal + tax (with small delta for floating point comparison)
+            assertTrue(subtotal > 0, "Subtotal should be greater than 0");
+            assertTrue(tax > 0, "Tax should be greater than 0");
+            assertEquals(subtotal + tax, total, 0.001, 
+                    "Total amount should equal subtotal plus tax");
+        } catch (Exception e) {
+            // Take a screenshot and log the error
+            WebDriverManager.captureScreenshot("OrderSummaryError");
+            System.err.println("Exception in testOrderSummary: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
     }
     
     /**

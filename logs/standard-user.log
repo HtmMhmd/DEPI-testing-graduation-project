@@ -12,3 +12,68 @@
 2025-05-17 01:30:35.212 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
 2025-05-17 01:30:45.723 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
 2025-05-17 01:30:45.758 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: false
+2025-05-17 01:34:35.670 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:34:35.670 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:34:35.670 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:34:35.670 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:34:36.155 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:34:36.220 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:34:36.220 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:34:36.353 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:34:36.353 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:34:36.415 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:34:36.471 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:34:36.712 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:36:10.335 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:36:10.336 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:36:10.336 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:36:10.336 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:36:10.651 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:36:10.726 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:36:10.726 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:36:10.829 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:36:10.829 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:36:10.888 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:36:10.963 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:36:11.223 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:36:21.746 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:36:21.770 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: false
+2025-05-17 01:38:27.692 [main] INFO  com.swaglabs.user.STANDARD_USER - Testing login for: standard_user
+2025-05-17 01:38:27.693 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:27.693 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:38:27.693 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:27.693 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:38:28.167 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:38:28.225 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:38:28.226 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:38:28.369 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:38:28.369 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:38:28.446 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:38:28.518 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:38:28.751 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:38:28.853 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:38:28.888 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: true
+2025-05-17 01:38:28.888 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:28.889 [main] INFO  com.swaglabs.user.STANDARD_USER - END TEST: Standard User Login Flow for standard_user - PASS
+2025-05-17 01:38:28.889 [main] INFO  com.swaglabs.user.STANDARD_USER - Message: All steps completed successfully
+2025-05-17 01:38:28.889 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:49.930 [main] INFO  com.swaglabs.user.STANDARD_USER - Starting all tests for user type: standard_user
+2025-05-17 01:38:49.931 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:49.932 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:38:49.932 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:49.932 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:38:50.376 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:38:50.446 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:38:50.446 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:38:50.565 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:38:50.565 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:38:50.636 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:38:50.703 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:38:50.975 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:38:51.091 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:38:51.129 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: true
+2025-05-17 01:38:51.132 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:51.132 [main] INFO  com.swaglabs.user.STANDARD_USER - END TEST: Standard User Login Flow for standard_user - PASS
+2025-05-17 01:38:51.132 [main] INFO  com.swaglabs.user.STANDARD_USER - Message: All steps completed successfully
+2025-05-17 01:38:51.132 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:38:51.132 [main] INFO  com.swaglabs.user.STANDARD_USER - Completed all tests for user type: standard_user
