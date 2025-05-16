@@ -48,3 +48,37 @@
 2025-05-17 01:39:04.825 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
 2025-05-17 01:39:04.825 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
 2025-05-17 01:39:04.826 [main] INFO  com.swaglabs.user.ERROR_USER - Completed all tests for user type: error_user
+2025-05-17 01:51:14.275 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:14.282 [main] INFO  com.swaglabs.user.ERROR_USER - START TEST: Error User Login & Cart Functionality Test for error_user
+2025-05-17 01:51:14.283 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:14.284 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Logging in as error user
+2025-05-17 01:51:14.759 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Verifying redirect to products page
+2025-05-17 01:51:15.057 [main] INFO  com.swaglabs.user.ERROR_USER - On products page: true
+2025-05-17 01:51:15.057 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:51:15.243 [main] INFO  com.swaglabs.user.ERROR_USER - Cart count after adding product: 1
+2025-05-17 01:51:15.243 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Navigating to cart page
+2025-05-17 01:51:15.331 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Checking if product is in cart
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - Product is in cart: true
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - Product was added to cart despite being error_user
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - END TEST: Error User Login & Cart Functionality Test for error_user - PASS
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - Starting all tests for user type: error_user
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - START TEST: Error User Login & Cart Functionality Test for error_user
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Logging in as error user
+2025-05-17 01:54:09.211 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:09.264 [main] INFO  com.swaglabs.user.ERROR_USER - On products page: true
+2025-05-17 01:54:09.264 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:54:09.409 [main] INFO  com.swaglabs.user.ERROR_USER - Cart count after adding product: 1
+2025-05-17 01:54:09.409 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Navigating to cart page
+2025-05-17 01:54:09.480 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Checking if product is in cart
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Product is in cart: true
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Product was added to cart despite being error_user
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - END TEST: Error User Login & Cart Functionality Test for error_user - PASS
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Completed all tests for user type: error_user

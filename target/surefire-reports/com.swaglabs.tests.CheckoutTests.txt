@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.swaglabs.tests.CheckoutTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 69.365 s <<< FAILURE! - in com.swaglabs.tests.CheckoutTests
+com.swaglabs.tests.CheckoutTests.testCompletePurchase  Time elapsed: 28.731 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Order confirmation page should be displayed after completing purchase ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at com.swaglabs.tests.CheckoutTests.testCompletePurchase(CheckoutTests.java:190)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+

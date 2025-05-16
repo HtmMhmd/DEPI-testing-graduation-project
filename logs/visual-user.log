@@ -52,3 +52,31 @@
 2025-05-17 01:39:12.163 [main] INFO  com.swaglabs.user.VISUAL_USER - Message: All steps completed successfully
 2025-05-17 01:39:12.163 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
 2025-05-17 01:39:12.163 [main] INFO  com.swaglabs.user.VISUAL_USER - Completed all tests for user type: visual_user
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - START TEST: Visual User Login Test for visual_user
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Logging in as visual user
+2025-05-17 01:50:25.766 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Verifying redirect to products page
+2025-05-17 01:50:25.823 [main] INFO  com.swaglabs.user.VISUAL_USER - On products page: true
+2025-05-17 01:50:25.823 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:50:26.020 [main] INFO  com.swaglabs.user.VISUAL_USER - Cart count after adding product: 1
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - Visual user test complete - manual verification of visual elements recommended
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - END TEST: Visual User Login Test for visual_user - PASS
+2025-05-17 01:50:26.022 [main] INFO  com.swaglabs.user.VISUAL_USER - Message: All steps completed successfully
+2025-05-17 01:50:26.023 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - Starting all tests for user type: visual_user
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - START TEST: Visual User Login Test for visual_user
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Logging in as visual user
+2025-05-17 01:54:20.300 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:20.360 [main] INFO  com.swaglabs.user.VISUAL_USER - On products page: true
+2025-05-17 01:54:20.360 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - Cart count after adding product: 1
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - Visual user test complete - manual verification of visual elements recommended
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - END TEST: Visual User Login Test for visual_user - PASS
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - Message: All steps completed successfully
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - Completed all tests for user type: visual_user

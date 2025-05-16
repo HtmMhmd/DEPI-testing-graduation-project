@@ -48,3 +48,37 @@
 2025-05-17 01:39:00.668 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Message: All steps completed successfully. Login time: 5494 ms
 2025-05-17 01:39:00.668 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
 2025-05-17 01:39:00.668 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Completed all tests for user type: performance_glitch_user
+2025-05-17 01:51:03.150 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - START TEST: Performance Glitch User Login Test for performance_glitch_user
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Recording start time before login
+2025-05-17 01:51:03.152 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Start time: 1747435863151
+2025-05-17 01:51:03.152 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Logging in as performance glitch user
+2025-05-17 01:51:08.672 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - End time: 1747435868672
+2025-05-17 01:51:08.675 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login duration: 5521 ms
+2025-05-17 01:51:08.675 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying redirect to products page
+2025-05-17 01:51:08.782 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - On products page: true
+2025-05-17 01:51:08.782 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying login took longer than normal (> 2 seconds)
+2025-05-17 01:51:08.784 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login took longer than 2 seconds: true
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - END TEST: Performance Glitch User Login Test for performance_glitch_user - PASS
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Message: All steps completed successfully. Login time: 5521 ms
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Starting all tests for user type: performance_glitch_user
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - START TEST: Performance Glitch User Login Test for performance_glitch_user
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Recording start time before login
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Start time: 1747436038845
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Logging in as performance glitch user
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - End time: 1747436044217
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login duration: 5372 ms
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - On products page: true
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying login took longer than normal (> 2 seconds)
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login took longer than 2 seconds: true
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - END TEST: Performance Glitch User Login Test for performance_glitch_user - PASS
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Message: All steps completed successfully. Login time: 5372 ms
+2025-05-17 01:54:04.286 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:54:04.286 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Completed all tests for user type: performance_glitch_user

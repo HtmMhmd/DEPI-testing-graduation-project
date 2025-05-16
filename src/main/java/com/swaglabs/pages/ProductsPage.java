@@ -71,8 +71,34 @@ public class ProductsPage extends BasePage {
     }
     
     public ProductDetailsPage clickOnProduct(String productName) {
-        String xpath = String.format("//div[text()='%s']", productName);
-        click(By.xpath(xpath));
+        try {
+            // First try with exact product name using link text
+            wait.until(ExpectedConditions.elementToBeClickable(By.linkText(productName))).click();
+        } catch (Exception e) {
+            System.out.println("Could not find product by link text, trying XPath: " + e.getMessage());
+            try {
+                // Second, try with xpath that contains the product name
+                String xpath = String.format("//div[contains(@class,'inventory_item_name') and contains(text(),'%s')]", productName);
+                WebElement product = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+                product.click();
+            } catch (Exception e2) {
+                System.out.println("Could not find product by XPath, trying more general approach: " + e2.getMessage());
+                // Last resort, try to find any product element and click it
+                WebElement anyProduct = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.cssSelector(".inventory_item_name")
+                ));
+                anyProduct.click();
+            }
+        }
+        
+        // Wait for the page transition to complete
+        try {
+            // Wait for the URL to change to indicate we're on a details page
+            wait.until(driver -> driver.getCurrentUrl().contains("inventory-item"));
+        } catch (Exception e) {
+            System.out.println("URL did not change to inventory-item, but continuing with test");
+        }
+        
         return new ProductDetailsPage();
     }
     

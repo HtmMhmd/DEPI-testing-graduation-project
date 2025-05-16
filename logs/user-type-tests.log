@@ -828,3 +828,615 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Session ID: f6ea345993f9ccca1c6ec4e52063caad
 2025-05-17 01:39:25.510 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
 2025-05-17 01:39:25.655 [main] INFO  com.swaglabs.utils.TestLogger - Test summary generated: c:\Users\LENOVO\Desktop\New folder (2)\logs\test-summary.md
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - START TEST: Visual User Login Test for visual_user
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:25.400 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Logging in as visual user
+2025-05-17 01:50:25.766 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Verifying redirect to products page
+2025-05-17 01:50:25.823 [main] INFO  com.swaglabs.user.VISUAL_USER - On products page: true
+2025-05-17 01:50:25.823 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:50:26.020 [main] INFO  com.swaglabs.user.VISUAL_USER - Cart count after adding product: 1
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - Visual user test complete - manual verification of visual elements recommended
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:26.021 [main] INFO  com.swaglabs.user.VISUAL_USER - END TEST: Visual User Login Test for visual_user - PASS
+2025-05-17 01:50:26.022 [main] INFO  com.swaglabs.user.VISUAL_USER - Message: All steps completed successfully
+2025-05-17 01:50:26.023 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:50:31.752 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:50:31.752 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:50:31.752 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:50:31.752 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:50:32.121 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:50:32.463 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:50:32.463 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:50:32.594 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:50:32.594 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:50:32.673 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:50:32.899 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:50:33.393 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:50:43.988 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:50:44.019 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: false
+2025-05-17 01:50:48.353 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:50:48.357 [main] INFO  com.swaglabs.user.PROBLEM_USER - START TEST: Problem User Login & UI Issues Test for problem_user
+2025-05-17 01:50:48.357 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:50:48.357 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Logging in as problem user
+2025-05-17 01:50:48.695 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Verifying redirect to products page
+2025-05-17 01:50:48.772 [main] INFO  com.swaglabs.user.PROBLEM_USER - On products page: true
+2025-05-17 01:50:48.772 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Checking for UI inconsistencies with product images
+2025-05-17 01:50:48.787 [main] INFO  com.swaglabs.user.PROBLEM_USER - Number of product images found: 12
+2025-05-17 01:50:48.823 [main] INFO  com.swaglabs.user.PROBLEM_USER - First image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:50:48.849 [main] INFO  com.swaglabs.user.PROBLEM_USER - Image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:50:58.900 [main] ERROR com.swaglabs.user.PROBLEM_USER - ERROR: Test failed with exception
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a5e12d189cbaa9c545dcd5dd9a6a7b5e, findChildElement {id=f.FD077F853B1B64F0C665AEE5EEA7AED2.d.F68022A0E8FCEF433021C0B407393002.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64020/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5e12d189cbaa9c545dcd5dd9a6a7b5e
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:212) ~[selenium-remote-driver-4.16.1.jar:?]
+	at com.swaglabs.tests.UserTypeTests.testProblemUser(UserTypeTests.java:183) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.0.0.jar:3.0.0]
+2025-05-17 01:50:58.912 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:50:58.912 [main] INFO  com.swaglabs.user.PROBLEM_USER - END TEST: Problem User Login & UI Issues Test for problem_user - FAIL
+2025-05-17 01:50:58.912 [main] INFO  com.swaglabs.user.PROBLEM_USER - Message: Test failed: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a5e12d189cbaa9c545dcd5dd9a6a7b5e, findChildElement {id=f.FD077F853B1B64F0C665AEE5EEA7AED2.d.F68022A0E8FCEF433021C0B407393002.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64020/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a5e12d189cbaa9c545dcd5dd9a6a7b5e
+2025-05-17 01:50:58.912 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:51:03.150 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - START TEST: Performance Glitch User Login Test for performance_glitch_user
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:03.151 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Recording start time before login
+2025-05-17 01:51:03.152 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Start time: 1747435863151
+2025-05-17 01:51:03.152 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Logging in as performance glitch user
+2025-05-17 01:51:08.672 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - End time: 1747435868672
+2025-05-17 01:51:08.675 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login duration: 5521 ms
+2025-05-17 01:51:08.675 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying redirect to products page
+2025-05-17 01:51:08.782 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - On products page: true
+2025-05-17 01:51:08.782 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying login took longer than normal (> 2 seconds)
+2025-05-17 01:51:08.784 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login took longer than 2 seconds: true
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - END TEST: Performance Glitch User Login Test for performance_glitch_user - PASS
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Message: All steps completed successfully. Login time: 5521 ms
+2025-05-17 01:51:08.785 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:51:14.275 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:14.282 [main] INFO  com.swaglabs.user.ERROR_USER - START TEST: Error User Login & Cart Functionality Test for error_user
+2025-05-17 01:51:14.283 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:14.284 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Logging in as error user
+2025-05-17 01:51:14.759 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Verifying redirect to products page
+2025-05-17 01:51:15.057 [main] INFO  com.swaglabs.user.ERROR_USER - On products page: true
+2025-05-17 01:51:15.057 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:51:15.243 [main] INFO  com.swaglabs.user.ERROR_USER - Cart count after adding product: 1
+2025-05-17 01:51:15.243 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Navigating to cart page
+2025-05-17 01:51:15.331 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Checking if product is in cart
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - Product is in cart: true
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - Product was added to cart despite being error_user
+2025-05-17 01:51:15.384 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - END TEST: Error User Login & Cart Functionality Test for error_user - PASS
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
+2025-05-17 01:51:15.385 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:51:21.045 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:51:21.046 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - START TEST: Locked Out User Login Test for locked_out_user
+2025-05-17 01:51:21.046 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:51:21.046 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Attempting to login as locked out user
+2025-05-17 01:51:21.398 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message is displayed
+2025-05-17 01:51:21.446 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message displayed: true
+2025-05-17 01:51:21.446 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message contains 'locked out' text
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message: epic sadface: sorry, this user has been locked out.
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message contains 'locked out': true
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - END TEST: Locked Out User Login Test for locked_out_user - PASS
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Message: All steps completed successfully
+2025-05-17 01:51:21.486 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:51:21.606 [main] INFO  com.swaglabs.utils.TestLogger - Test summary generated: c:\Users\LENOVO\Desktop\New folder (2)\logs\test-summary.md
+2025-05-17 01:53:20.926 [main] INFO  com.swaglabs.user.STANDARD_USER - Testing login for: standard_user
+2025-05-17 01:53:20.926 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:20.926 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:53:20.926 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:20.926 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:53:21.368 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:53:21.445 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:53:21.446 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:53:21.601 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:53:21.601 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:53:21.682 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:53:21.849 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:53:22.146 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:53:22.274 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:53:22.316 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: true
+2025-05-17 01:53:22.316 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:22.316 [main] INFO  com.swaglabs.user.STANDARD_USER - END TEST: Standard User Login Flow for standard_user - PASS
+2025-05-17 01:53:22.316 [main] INFO  com.swaglabs.user.STANDARD_USER - Message: All steps completed successfully
+2025-05-17 01:53:22.316 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:30.360 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Testing login for: locked_out_user
+2025-05-17 01:53:30.360 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:53:30.360 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - START TEST: Locked Out User Login Test for locked_out_user
+2025-05-17 01:53:30.360 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:53:30.360 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Attempting to login as locked out user
+2025-05-17 01:53:30.697 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message is displayed
+2025-05-17 01:53:30.746 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message displayed: true
+2025-05-17 01:53:30.746 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message contains 'locked out' text
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message: epic sadface: sorry, this user has been locked out.
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message contains 'locked out': true
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - END TEST: Locked Out User Login Test for locked_out_user - PASS
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Message: All steps completed successfully
+2025-05-17 01:53:30.783 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:53:36.915 [main] INFO  com.swaglabs.user.PROBLEM_USER - Testing login for: problem_user
+2025-05-17 01:53:36.915 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:53:36.915 [main] INFO  com.swaglabs.user.PROBLEM_USER - START TEST: Problem User Login & UI Issues Test for problem_user
+2025-05-17 01:53:36.915 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:53:36.915 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Logging in as problem user
+2025-05-17 01:53:37.263 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Verifying redirect to products page
+2025-05-17 01:53:37.318 [main] INFO  com.swaglabs.user.PROBLEM_USER - On products page: true
+2025-05-17 01:53:37.320 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Checking for UI inconsistencies with product images
+2025-05-17 01:53:37.334 [main] INFO  com.swaglabs.user.PROBLEM_USER - Number of product images found: 12
+2025-05-17 01:53:37.371 [main] INFO  com.swaglabs.user.PROBLEM_USER - First image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:53:37.393 [main] INFO  com.swaglabs.user.PROBLEM_USER - Image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:53:47.457 [main] ERROR com.swaglabs.user.PROBLEM_USER - ERROR: Test failed with exception
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [331c4df7dca8322d2298deab4596221b, findChildElement {id=f.40655117B9287F802882085A21007A27.d.F2A01F711711E5DF5F9C83C94B368FD1.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52172}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52172/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 331c4df7dca8322d2298deab4596221b
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:212) ~[selenium-remote-driver-4.16.1.jar:?]
+	at com.swaglabs.tests.UserTypeTests.testProblemUser(UserTypeTests.java:183) ~[test-classes/:?]
+	at com.swaglabs.tests.UserTypeLogTests.testAllUserTypeLogins(UserTypeLogTests.java:127) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.0.0.jar:3.0.0]
+2025-05-17 01:53:47.462 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:53:47.462 [main] INFO  com.swaglabs.user.PROBLEM_USER - END TEST: Problem User Login & UI Issues Test for problem_user - FAIL
+2025-05-17 01:53:47.462 [main] INFO  com.swaglabs.user.PROBLEM_USER - Message: Test failed: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [331c4df7dca8322d2298deab4596221b, findChildElement {id=f.40655117B9287F802882085A21007A27.d.F2A01F711711E5DF5F9C83C94B368FD1.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52172}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52172/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 331c4df7dca8322d2298deab4596221b
+2025-05-17 01:53:47.462 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:53:51.755 [main] INFO  com.swaglabs.user.STANDARD_USER - Starting all tests for user type: standard_user
+2025-05-17 01:53:51.757 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:51.757 [main] INFO  com.swaglabs.user.STANDARD_USER - START TEST: Standard User Login Flow for standard_user
+2025-05-17 01:53:51.757 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:51.757 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Logging in as standard user
+2025-05-17 01:53:52.105 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying redirect to products page
+2025-05-17 01:53:52.173 [main] INFO  com.swaglabs.user.STANDARD_USER - On products page: true
+2025-05-17 01:53:52.173 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:53:52.322 [main] INFO  com.swaglabs.user.STANDARD_USER - Cart count after adding product: 1
+2025-05-17 01:53:52.323 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Navigating to cart page
+2025-05-17 01:53:52.394 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Starting checkout process
+2025-05-17 01:53:52.557 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Filling customer information
+2025-05-17 01:53:52.801 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Continuing to checkout step two
+2025-05-17 01:53:52.916 [main] INFO  com.swaglabs.user.STANDARD_USER - STEP: Verifying user is on checkout step two
+2025-05-17 01:53:52.943 [main] INFO  com.swaglabs.user.STANDARD_USER - On checkout step two: true
+2025-05-17 01:53:52.945 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:52.945 [main] INFO  com.swaglabs.user.STANDARD_USER - END TEST: Standard User Login Flow for standard_user - PASS
+2025-05-17 01:53:52.945 [main] INFO  com.swaglabs.user.STANDARD_USER - Message: All steps completed successfully
+2025-05-17 01:53:52.945 [main] INFO  com.swaglabs.user.STANDARD_USER - ======================================================
+2025-05-17 01:53:52.945 [main] INFO  com.swaglabs.user.STANDARD_USER - Completed all tests for user type: standard_user
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Starting all tests for user type: performance_glitch_user
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - START TEST: Performance Glitch User Login Test for performance_glitch_user
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Recording start time before login
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Start time: 1747436038845
+2025-05-17 01:53:58.845 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Logging in as performance glitch user
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - End time: 1747436044217
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login duration: 5372 ms
+2025-05-17 01:54:04.217 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - On products page: true
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - STEP: Verifying login took longer than normal (> 2 seconds)
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Login took longer than 2 seconds: true
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - END TEST: Performance Glitch User Login Test for performance_glitch_user - PASS
+2025-05-17 01:54:04.285 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Message: All steps completed successfully. Login time: 5372 ms
+2025-05-17 01:54:04.286 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - ======================================================
+2025-05-17 01:54:04.286 [main] INFO  com.swaglabs.user.PERFORMANCE_GLITCH_USER - Completed all tests for user type: performance_glitch_user
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - Starting all tests for user type: error_user
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - START TEST: Error User Login & Cart Functionality Test for error_user
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:08.865 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Logging in as error user
+2025-05-17 01:54:09.211 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:09.264 [main] INFO  com.swaglabs.user.ERROR_USER - On products page: true
+2025-05-17 01:54:09.264 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:54:09.409 [main] INFO  com.swaglabs.user.ERROR_USER - Cart count after adding product: 1
+2025-05-17 01:54:09.409 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Navigating to cart page
+2025-05-17 01:54:09.480 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Checking if product is in cart
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Product is in cart: true
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Product was added to cart despite being error_user
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - END TEST: Error User Login & Cart Functionality Test for error_user - PASS
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:54:09.520 [main] INFO  com.swaglabs.user.ERROR_USER - Completed all tests for user type: error_user
+2025-05-17 01:54:14.831 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Starting all tests for user type: locked_out_user
+2025-05-17 01:54:14.831 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:54:14.832 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - START TEST: Locked Out User Login Test for locked_out_user
+2025-05-17 01:54:14.832 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:54:14.832 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Attempting to login as locked out user
+2025-05-17 01:54:15.152 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message is displayed
+2025-05-17 01:54:15.192 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message displayed: true
+2025-05-17 01:54:15.192 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message contains 'locked out' text
+2025-05-17 01:54:15.214 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message: epic sadface: sorry, this user has been locked out.
+2025-05-17 01:54:15.214 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message contains 'locked out': true
+2025-05-17 01:54:15.218 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:54:15.218 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - END TEST: Locked Out User Login Test for locked_out_user - PASS
+2025-05-17 01:54:15.218 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Message: All steps completed successfully
+2025-05-17 01:54:15.218 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:54:15.218 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Completed all tests for user type: locked_out_user
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - Starting all tests for user type: visual_user
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - START TEST: Visual User Login Test for visual_user
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:19.978 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Logging in as visual user
+2025-05-17 01:54:20.300 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:20.360 [main] INFO  com.swaglabs.user.VISUAL_USER - On products page: true
+2025-05-17 01:54:20.360 [main] INFO  com.swaglabs.user.VISUAL_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - Cart count after adding product: 1
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - Visual user test complete - manual verification of visual elements recommended
+2025-05-17 01:54:20.499 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - END TEST: Visual User Login Test for visual_user - PASS
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - Message: All steps completed successfully
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - ======================================================
+2025-05-17 01:54:20.500 [main] INFO  com.swaglabs.user.VISUAL_USER - Completed all tests for user type: visual_user
+2025-05-17 01:54:26.045 [main] INFO  com.swaglabs.user.PROBLEM_USER - Starting all tests for user type: problem_user
+2025-05-17 01:54:26.045 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:54:26.045 [main] INFO  com.swaglabs.user.PROBLEM_USER - START TEST: Problem User Login & UI Issues Test for problem_user
+2025-05-17 01:54:26.045 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:54:26.048 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Logging in as problem user
+2025-05-17 01:54:26.596 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Verifying redirect to products page
+2025-05-17 01:54:26.664 [main] INFO  com.swaglabs.user.PROBLEM_USER - On products page: true
+2025-05-17 01:54:26.664 [main] INFO  com.swaglabs.user.PROBLEM_USER - STEP: Checking for UI inconsistencies with product images
+2025-05-17 01:54:26.684 [main] INFO  com.swaglabs.user.PROBLEM_USER - Number of product images found: 12
+2025-05-17 01:54:26.716 [main] INFO  com.swaglabs.user.PROBLEM_USER - First image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:54:26.738 [main] INFO  com.swaglabs.user.PROBLEM_USER - Image source: https://www.saucedemo.com/static/media/sl-404.168b1cce.jpg
+2025-05-17 01:54:36.782 [main] ERROR com.swaglabs.user.PROBLEM_USER - ERROR: Test failed with exception
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c203054e7459ce4ff7a16706eef6d9e, findChildElement {id=f.DB295332DF70D592D785EB95CBCCE10E.d.D5776FD584D64F55CEA612E0BC213024.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53174/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c203054e7459ce4ff7a16706eef6d9e
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360) ~[selenium-remote-driver-4.16.1.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.findElement(RemoteWebElement.java:212) ~[selenium-remote-driver-4.16.1.jar:?]
+	at com.swaglabs.tests.UserTypeTests.testProblemUser(UserTypeTests.java:183) ~[test-classes/:?]
+	at com.swaglabs.tests.UserTypeTests.runAllTestsForUserType(UserTypeTests.java:369) ~[test-classes/:?]
+	at com.swaglabs.tests.UserTypeLogTests.testProblemUserComprehensive(UserTypeLogTests.java:60) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.0.jar:5.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.0.jar:1.10.0]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) [surefire-junit-platform-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) [surefire-booter-3.0.0.jar:3.0.0]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) [surefire-booter-3.0.0.jar:3.0.0]
+2025-05-17 01:54:36.782 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:54:36.782 [main] INFO  com.swaglabs.user.PROBLEM_USER - END TEST: Problem User Login & UI Issues Test for problem_user - FAIL
+2025-05-17 01:54:36.782 [main] INFO  com.swaglabs.user.PROBLEM_USER - Message: Test failed: no such element: Unable to locate element: {"method":"tag name","selector":"img"}
+  (Session info: chrome=136.0.7103.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c203054e7459ce4ff7a16706eef6d9e, findChildElement {id=f.DB295332DF70D592D785EB95CBCCE10E.d.D5776FD584D64F55CEA612E0BC213024.e.18, using=tag name, value=img}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.114, chrome: {chromedriverVersion: 136.0.7103.94 (fa0be0b33deb..., userDataDir: C:\Users\LENOVO\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53174}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53174/devtoo..., se:cdpVersion: 136.0.7103.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c203054e7459ce4ff7a16706eef6d9e
+2025-05-17 01:54:36.782 [main] INFO  com.swaglabs.user.PROBLEM_USER - ======================================================
+2025-05-17 01:54:36.969 [main] INFO  com.swaglabs.utils.TestLogger - Test summary generated: c:\Users\LENOVO\Desktop\New folder (2)\logs\test-summary.md

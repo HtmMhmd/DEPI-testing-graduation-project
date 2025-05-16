@@ -3,11 +3,15 @@ package com.swaglabs.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProductDetailsPage extends BasePage {
-    // Locators
+    // Multiple locators for product name to improve resilience
     @FindBy(css = ".inventory_details_name")
     private WebElement productName;
+    
+    // Alternative locator for product name
+    private By productNameLocator = By.cssSelector(".inventory_details_name, .inventory_details_desc_container .inventory_item_name");
     
     @FindBy(css = ".inventory_details_desc")
     private WebElement productDescription;
@@ -27,17 +31,74 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(id = "back-to-products")
     private WebElement backToProductsButton;
     
-    // Methods
+    // Constructor that waits for the page to be loaded
+    public ProductDetailsPage() {
+        super();
+        waitForProductDetailsPageToLoad();
+    }
+    
+    // Wait for product details page to load
+    private void waitForProductDetailsPageToLoad() {
+        try {
+            // First wait for back button since it's a reliable indicator this is the details page
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("back-to-products")));
+            
+            // Then wait for product name using various possible locators
+            wait.until(ExpectedConditions.or(
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".inventory_details_name")),
+                ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".inventory_item_name"))
+            ));
+            
+        } catch (Exception e) {
+            System.err.println("Error waiting for product details page to load: " + e.getMessage());
+            // Take screenshot if possible
+            try {
+                if (driver != null) {
+                    org.openqa.selenium.TakesScreenshot ts = (org.openqa.selenium.TakesScreenshot) driver;
+                    byte[] screenshot = ts.getScreenshotAs(org.openqa.selenium.OutputType.BYTES);
+                    System.err.println("Screenshot taken of failed page load");
+                }
+            } catch (Exception screenshotError) {
+                System.err.println("Could not take screenshot: " + screenshotError.getMessage());
+            }
+        }
+    }
+    
     public String getProductName() {
-        return productName.getText();
+        try {
+            return productName.getText();
+        } catch (Exception e) {
+            // Try alternative locator if the first one fails
+            WebElement altProductName = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(productNameLocator));
+            return altProductName.getText();
+        }
     }
     
     public String getProductDescription() {
-        return productDescription.getText();
+        try {
+            return productDescription.getText();
+        } catch (Exception e) {
+            // Try a different approach if the first one fails
+            WebElement altDescription = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector(".inventory_details_desc, .inventory_item_desc")));
+            return altDescription.getText();
+        }
     }
     
     public double getProductPrice() {
-        return Double.parseDouble(productPrice.getText().replace("$", ""));
+        try {
+            String priceText = productPrice.getText().replace("$", "");
+            return Double.parseDouble(priceText);
+        } catch (Exception e) {
+            // Try a different approach if the first one fails
+            WebElement altPrice = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector(".inventory_details_price, .inventory_item_price")));
+            String priceText = altPrice.getText().replace("$", "");
+            return Double.parseDouble(priceText);
+        }
     }
     
     public ProductDetailsPage addToCart() {
