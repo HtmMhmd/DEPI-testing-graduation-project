@@ -185,28 +185,44 @@ public class ProductTests {
                 System.out.println("Using alternative product: " + productToTest);
             }
             
-            // Click on the product to view its details
+            // Take screenshot before clicking on product (for debugging)
+            WebDriverManager.captureScreenshot("BeforeClickingProduct");
+            
+            System.out.println("Attempting to click on product: " + productToTest);
+            
+            // Click on the product to view its details with explicit wait
             ProductDetailsPage productDetailsPage = productsPage.clickOnProduct(productToTest);
             
-            // Add short wait to ensure page load completes
+            // Add a longer wait to ensure page load completes (especially for slower environments)
             try {
-                Thread.sleep(500);
+                Thread.sleep(1000); // 1 second should be enough
             } catch (InterruptedException e) {
                 // Ignore
             }
+            
+            // Take screenshot after navigating to product details (for debugging)
+            WebDriverManager.captureScreenshot("AfterNavigatingToProductDetails");
             
             // Get and log the product name for debugging
             String actualProductName = productDetailsPage.getProductName();
             System.out.println("Product details page shows: " + actualProductName);
             
             // More lenient verification - just check that we got some product details
-            assertFalse(actualProductName.isEmpty(), 
+            assertFalse(actualProductName.isEmpty() || actualProductName.equals("Product Name Not Available"), 
                        "Product name should not be empty");
-            assertFalse(productDetailsPage.getProductDescription().isEmpty(), 
+            
+            String description = productDetailsPage.getProductDescription();
+            System.out.println("Product description: " + description);
+            assertFalse(description.isEmpty() || description.equals("Description Not Available"), 
                        "Product description should not be empty");
-            assertTrue(productDetailsPage.getProductPrice() > 0, 
+            
+            double price = productDetailsPage.getProductPrice();
+            System.out.println("Product price: $" + price);
+            assertTrue(price > 0, 
                       "Product price should be greater than 0");
         } catch (Exception e) {
+            // Take screenshot on failure
+            WebDriverManager.captureScreenshot("ProductDetailsTestFailure");
             System.err.println("Error in testViewProductDetails: " + e.getMessage());
             e.printStackTrace();
             throw e;  // Re-throw to fail the test
