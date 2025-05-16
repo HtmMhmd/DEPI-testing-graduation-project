@@ -11,5 +11,4 @@ com\swaglabs\utils\WebDriverManager.class
 com\swaglabs\pages\ProductDetailsPage.class
 com\swaglabs\pages\ParallelLoginPage.class
 com\swaglabs\utils\ThreadLocalWebDriverManager.class
-com\swaglabs\utils\TestListener.class
 com\swaglabs\pages\LoginPage.class

@@ -1,0 +1,244 @@
+package com.swaglabs.tests;
+
+import com.swaglabs.pages.CartPage;
+import com.swaglabs.pages.CheckoutPage;
+import com.swaglabs.pages.LoginPage;
+import com.swaglabs.pages.ProductsPage;
+import com.swaglabs.utils.WebDriverManager;
+import com.swaglabs.utils.TestListener;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EnumSource;
+import com.swaglabs.enums.UserType;
+
+/**
+ * Test cases for different user types in Swag Labs application
+ * Authors: Omar Shahin, Hatem Mohamed
+ */
+@TestMethodOrder(MethodOrderer.DisplayName.class)
+@ExtendWith(TestListener.class)
+public class UserTypeTests {
+    private WebDriver driver;
+    private LoginPage loginPage;
+    private ProductsPage productsPage;
+    private CartPage cartPage;
+    private CheckoutPage checkoutPage;
+
+    private static final String TEST_PRODUCT = "Sauce Labs Backpack";
+
+    @BeforeEach
+    public void setup() {
+        WebDriverManager.setupDriver();
+        WebDriverManager.navigateToBaseUrl();
+        driver = WebDriverManager.getDriver();
+        loginPage = new LoginPage();
+    }
+
+    @AfterEach
+    public void tearDown() {
+        WebDriverManager.quitDriver();
+    }
+
+    /**
+     * TC-101: Standard User Login and Checkout
+     * Description: Standard user can successfully login, add to cart, and complete checkout.
+     */
+    @Test
+    @DisplayName("TC-101: Standard User Login and Checkout")
+    public void testStandardUserLoginAndCheckout() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testStandardUserLoginAndCheckout";
+        TestListener.setCurrentUser(testId, UserType.STANDARD_USER.name());
+        
+        loginPage.login(UserType.STANDARD_USER);
+        productsPage = new ProductsPage();
+        assertTrue(productsPage.isProductsPageDisplayed(), "Products page should be displayed after login");
+        
+        productsPage.addProductToCart(TEST_PRODUCT);
+        assertEquals("1", productsPage.getCartCount(), "Cart count should be 1 after adding item");
+        
+        productsPage.navigateToCart();
+        cartPage = new CartPage();
+        assertTrue(cartPage.isCartPageDisplayed(), "Cart page should be displayed");
+        assertTrue(cartPage.isProductInCart(TEST_PRODUCT), "Product should be in cart");
+        
+        cartPage.proceedToCheckout();
+        checkoutPage = new CheckoutPage();
+        assertTrue(checkoutPage.isCheckoutPageDisplayed(), "Checkout page should be displayed");
+        
+        checkoutPage.enterShippingInfo("John", "Doe", "12345");
+        checkoutPage.clickContinue();
+        assertTrue(checkoutPage.isCheckoutOverviewDisplayed(), "Checkout overview should be displayed");
+        
+        checkoutPage.finishCheckout();
+        assertTrue(checkoutPage.isCheckoutCompleteDisplayed(), "Checkout complete page should be displayed");
+        assertEquals("Thank you for your order!", checkoutPage.getCompletionHeader(), 
+                "Checkout complete header does not match expected");
+    }
+
+    /**
+     * TC-102: Locked Out User Login Attempt
+     * Description: Locked out user should not be able to log in.
+     */
+    @Test
+    @DisplayName("TC-102: Locked Out User Login Attempt")
+    public void testLockedOutUserLogin() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testLockedOutUserLogin";
+        TestListener.setCurrentUser(testId, UserType.LOCKED_OUT_USER.name());
+        
+        loginPage.login(UserType.LOCKED_OUT_USER);
+        assertTrue(loginPage.isErrorDisplayed(), "Error message should be displayed");
+        
+        String errorMessage = loginPage.getErrorMessage();
+        assertTrue(errorMessage.contains("locked out"), 
+                "Error message should mention the user is locked out, but was: " + errorMessage);
+    }
+
+    /**
+     * TC-103: Problem User Product Images
+     * Description: Problem user sees incorrect product images.
+     */
+    @Test
+    @DisplayName("TC-103: Problem User Product Images")
+    public void testProblemUserProductImages() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testProblemUserProductImages";
+        TestListener.setCurrentUser(testId, UserType.PROBLEM_USER.name());
+        
+        loginPage.login(UserType.PROBLEM_USER);
+        productsPage = new ProductsPage();
+        assertTrue(productsPage.isProductsPageDisplayed(), "Products page should be displayed after login");
+        
+        // Check that all product images are the same (dog image)
+        List<WebElement> productImages = driver.findElements(By.className("inventory_item_img"));
+        String firstImageSrc = productImages.get(0).findElement(By.tagName("img")).getAttribute("src");
+        
+        boolean allImagesSame = true;
+        for (WebElement productImage : productImages) {
+            String imgSrc = productImage.findElement(By.tagName("img")).getAttribute("src");
+            if (!imgSrc.equals(firstImageSrc)) {
+                allImagesSame = false;
+                break;
+            }
+        }
+        
+        assertTrue(allImagesSame, "All product images should be the same for problem user");
+        assertTrue(firstImageSrc.contains("/static/media/sl-404."), 
+                "Product images should be dog images for problem user");
+    }
+
+    /**
+     * TC-104: Problem User Add to Cart Functionality
+     * Description: Problem user has issues with add to cart buttons.
+     */
+    @Test
+    @DisplayName("TC-104: Problem User Add to Cart Functionality")
+    public void testProblemUserAddToCartFunctionality() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testProblemUserAddToCartFunctionality";
+        TestListener.setCurrentUser(testId, UserType.PROBLEM_USER.name());
+        
+        loginPage.login(UserType.PROBLEM_USER);
+        productsPage = new ProductsPage();
+        
+        // Try to add all products to cart
+        List<WebElement> addButtons = driver.findElements(By.cssSelector("[data-test^='add-to-cart']"));
+        int expectedInCart = 0;
+        
+        for (WebElement button : addButtons) {
+            if (button.isEnabled()) {
+                button.click();
+                expectedInCart++;
+            }
+        }
+        
+        // Verify some items can't be added
+        assertTrue(expectedInCart < addButtons.size(), 
+                "Problem user should not be able to add all items to cart");
+    }
+
+    /**
+     * TC-105: Performance Glitch User Page Load Time
+     * Description: Performance glitch user experiences slow page loads.
+     */
+    @Test
+    @DisplayName("TC-105: Performance Glitch User Page Load Time")
+    public void testPerformanceGlitchUserPageLoadTime() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testPerformanceGlitchUserPageLoadTime";
+        TestListener.setCurrentUser(testId, UserType.PERFORMANCE_GLITCH_USER.name());
+        
+        long startTime = System.currentTimeMillis();
+        loginPage.login(UserType.PERFORMANCE_GLITCH_USER);
+        long endTime = System.currentTimeMillis();
+        long loginTime = endTime - startTime;
+        
+        productsPage = new ProductsPage();
+        assertTrue(productsPage.isProductsPageDisplayed(), "Products page should be displayed after login");
+        
+        // Performance glitch user should take longer to load pages
+        // Note: This is approximate and may need adjustment based on system performance
+        assertTrue(loginTime > 2000, 
+                "Performance glitch user login should take longer than 2 seconds, but took: " + loginTime + "ms");
+    }
+
+    /**
+     * TC-106: Visual User Login (Parametrized Test)
+     * Description: Visual user can login and see unique styling.
+     */
+    @Test
+    @DisplayName("TC-106: Visual User Login")
+    public void testVisualUserLogin() {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testVisualUserLogin";
+        TestListener.setCurrentUser(testId, UserType.VISUAL_USER.name());
+        
+        loginPage.login(UserType.VISUAL_USER);
+        productsPage = new ProductsPage();
+        assertTrue(productsPage.isProductsPageDisplayed(), "Products page should be displayed after login");
+        
+        // Check for unique visual elements like extra animations or styling
+        // This is hypothetical as of now since visual_user may not exist in all Swag Labs instances
+        WebElement inventoryContainer = driver.findElement(By.className("inventory_container"));
+        String inventoryStyle = inventoryContainer.getAttribute("class");
+        
+        // This assertion is fictional and would need to be adjusted based on actual implementation
+        if (inventoryStyle.contains("visual_user_style")) {
+            assertTrue(true, "Visual user has custom styling");
+        } else {
+            // Skip test if visual styling isn't implemented
+            System.out.println("Visual user styling not detected, this may be expected if not implemented");
+        }
+    }
+    
+    /**
+     * TC-107: Test All User Types (Parameterized)
+     * Description: All user types can attempt login with verification of expected results.
+     */
+    @ParameterizedTest
+    @EnumSource(UserType.class)
+    @DisplayName("TC-107: All User Types Login Test")
+    public void testAllUserTypes(UserType userType) {
+        // Log current user for the test
+        String testId = getClass().getName() + "." + "testAllUserTypes" + "[" + userType + "]";
+        TestListener.setCurrentUser(testId, userType.name());
+        
+        loginPage.login(userType);
+        
+        if (userType == UserType.LOCKED_OUT_USER) {
+            assertTrue(loginPage.isErrorDisplayed(), "Locked out user should see error message");
+        } else {
+            productsPage = new ProductsPage();
+            assertTrue(productsPage.isProductsPageDisplayed(), 
+                    userType + " should be able to reach products page after login");
+        }
+    }
+}

@@ -1,0 +1,72 @@
+package com.swaglabs.tests;
+
+import com.swaglabs.pages.ParallelLoginPage;
+import com.swaglabs.utils.ThreadLocalWebDriverManager;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import com.swaglabs.utils.TestListener;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * Test runner for parallel execution of all login tests
+ * Demonstrates using the ThreadLocalWebDriverManager and screenshot capture
+ */
+@ExtendWith(TestListener.class)
+public class ParallelLoginTests {
+    
+    private ParallelLoginPage loginPage;
+    
+    @BeforeEach
+    public void setup() {
+        ThreadLocalWebDriverManager.setupDriver();
+        ThreadLocalWebDriverManager.navigateToBaseUrl();
+        loginPage = new ParallelLoginPage();
+    }
+    
+    @AfterEach
+    public void tearDown() {
+        ThreadLocalWebDriverManager.quitDriver();
+    }
+    
+    @Test
+    @DisplayName("TC-001-P: Valid Login [Parallel]")
+    public void testValidLoginParallel() {
+        // Log the user being tested
+        String testId = getClass().getName() + "." + "testValidLoginParallel";
+        TestListener.setCurrentUser(testId, "standard_user");
+        
+        loginPage.enterUsername("standard_user");
+        loginPage.enterPassword("secret_sauce");
+        loginPage.clickLogin();
+        assertTrue(loginPage.isOnProductsPage(), "Should be on Products page after successful login");
+    }
+    
+    @Test
+    @DisplayName("TC-002-P: Invalid Login [Parallel]")
+    public void testInvalidLoginParallel() {
+        // Log the user being tested
+        String testId = getClass().getName() + "." + "testInvalidLoginParallel";
+        TestListener.setCurrentUser(testId, "invalid_user");
+        
+        loginPage.enterUsername("invalid_user");
+        loginPage.enterPassword("invalid_password");
+        loginPage.clickLogin();
+        assertTrue(loginPage.isErrorDisplayed(), "Should show error message for invalid credentials");
+        assertTrue(loginPage.getErrorText().contains("Username and password do not match"), "Error message should indicate invalid credentials");
+    }
+    
+    @Test
+    @DisplayName("TC-003-P: Locked Out User [Parallel]")
+    public void testLockedOutUserParallel() {
+        // Log the user being tested
+        String testId = getClass().getName() + "." + "testLockedOutUserParallel";
+        TestListener.setCurrentUser(testId, "locked_out_user");
+        
+        loginPage.enterUsername("locked_out_user");
+        loginPage.enterPassword("secret_sauce");
+        loginPage.clickLogin();
+        assertTrue(loginPage.isErrorDisplayed(), "Should show error message for locked out user");
+        assertTrue(loginPage.getErrorText().contains("locked out"), "Error message should indicate user is locked out");
+    }
+}
