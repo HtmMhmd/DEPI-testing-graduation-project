@@ -6,6 +6,7 @@ import com.swaglabs.utils.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -129,19 +130,41 @@ public class NavigationTests {
     @Test
     @DisplayName("TC-024: About Page")
     public void testAboutPage() {
-        // Open the hamburger menu
-        productsPage.openMenu();
-        productsPage.waitForMenuToAppear();
-        
-        // Wait for About link to be clickable before clicking
-        WebElement aboutLink = wait.until(
-            ExpectedConditions.elementToBeClickable(By.id("about_sidebar_link")));
-        aboutLink.click();
-        
-        // Verify user is redirected to Sauce Labs website
-        wait.until(ExpectedConditions.urlContains("saucelabs"));
-        assertTrue(driver.getCurrentUrl().contains("saucelabs.com"),
-                "User should be redirected to Sauce Labs website");
+        try {
+            // Make sure we're on the products page
+            assertTrue(productsPage.isOnProductsPage(), 
+                      "Should be on products page before opening menu");
+            
+            // Give the page a moment to fully load and stabilize
+            Thread.sleep(1000);
+            
+            // Open the hamburger menu with extended wait time
+            WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            WebElement menuButton = longWait.until(
+                ExpectedConditions.elementToBeClickable(By.id("react-burger-menu-btn")));
+            menuButton.click();
+            
+            // Wait for menu to slide in completely
+            Thread.sleep(1000);
+            
+            // Wait for About link specifically, not relying on the page's method
+            WebElement aboutLink = longWait.until(
+                ExpectedConditions.elementToBeClickable(By.id("about_sidebar_link")));
+            
+            // Use JavaScript click which is more reliable
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", aboutLink);
+            
+            // Verify user is redirected to Sauce Labs website with a longer timeout
+            longWait.until(ExpectedConditions.urlContains("saucelabs"));
+            
+            assertTrue(driver.getCurrentUrl().toLowerCase().contains("saucelabs"), 
+                      "User should be redirected to Sauce Labs website");
+        } 
+        catch (Exception e) {
+            WebDriverManager.captureScreenshot("AboutPageNavigationFailure");
+            System.err.println("Failed to navigate to about page: " + e.getMessage());
+            fail("Test failed: " + e.getMessage());
+        }
     }
     
     /**

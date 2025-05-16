@@ -20,6 +20,7 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.io.IOException;
+import java.util.Arrays;  // Add import for Arrays
 
 /**
  * WebDriver utility class for managing browser instances

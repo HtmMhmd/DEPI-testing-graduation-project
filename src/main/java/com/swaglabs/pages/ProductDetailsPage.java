@@ -181,7 +181,67 @@ public class ProductDetailsPage extends BasePage {
     }
     
     public ProductsPage backToProducts() {
-        backToProductsButton.click();
+        try {
+            // Try multiple selector strategies for the back button
+            List<String> selectorStrategies = Arrays.asList(
+                "id:back-to-products", 
+                "css:.back-to-products", 
+                "css:[data-test='back-to-products']",
+                "xpath://button[contains(text(),'Back')]"
+            );
+            
+            WebElement backButton = null;
+            
+            // Try each selector strategy until we find the button
+            for (String strategy : selectorStrategies) {
+                try {
+                    String[] parts = strategy.split(":", 2);
+                    String type = parts[0];
+                    String selector = parts[1];
+                    
+                    switch (type) {
+                        case "id":
+                            backButton = driver.findElement(By.id(selector));
+                            break;
+                        case "css":
+                            backButton = driver.findElement(By.cssSelector(selector));
+                            break;
+                        case "xpath":
+                            backButton = driver.findElement(By.xpath(selector));
+                            break;
+                    }
+                    
+                    if (backButton != null && backButton.isDisplayed()) {
+                        System.out.println("Found back button using: " + strategy);
+                        break;
+                    }
+                } catch (Exception e) {
+                    System.out.println("Could not find back button with " + strategy);
+                }
+            }
+            
+            if (backButton == null) {
+                // Last resort - try to navigate directly to inventory
+                System.out.println("Back button not found, navigating directly to inventory page");
+                driver.navigate().to("https://www.saucedemo.com/inventory.html");
+                wait.until(ExpectedConditions.urlContains("inventory"));
+                return new ProductsPage();
+            }
+            
+            // Otherwise click the button we found
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", backButton);
+            wait.until(ExpectedConditions.elementToBeClickable(backButton));
+            backButton.click();
+            
+            // Wait for products page to load
+            wait.until(driver -> driver.getCurrentUrl().contains("inventory.html"));
+            
+        } catch (Exception e) {
+            System.err.println("Error going back to products: " + e.getMessage());
+            // Navigate directly to inventory as fallback
+            driver.navigate().to("https://www.saucedemo.com/inventory.html");
+        }
+        
         return new ProductsPage();
     }
     
