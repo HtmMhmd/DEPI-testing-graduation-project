@@ -1,0 +1,13 @@
+2025-05-17 01:31:15.196 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:31:15.197 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - START TEST: Locked Out User Login Test for locked_out_user
+2025-05-17 01:31:15.197 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:31:15.197 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Attempting to login as locked out user
+2025-05-17 01:31:15.518 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message is displayed
+2025-05-17 01:31:15.561 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message displayed: true
+2025-05-17 01:31:15.562 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - STEP: Verifying error message contains 'locked out' text
+2025-05-17 01:31:15.596 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message: epic sadface: sorry, this user has been locked out.
+2025-05-17 01:31:15.596 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Error message contains 'locked out': true
+2025-05-17 01:31:15.596 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================
+2025-05-17 01:31:15.596 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - END TEST: Locked Out User Login Test for locked_out_user - PASS
+2025-05-17 01:31:15.596 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - Message: All steps completed successfully
+2025-05-17 01:31:15.597 [main] INFO  com.swaglabs.user.LOCKED_OUT_USER - ======================================================

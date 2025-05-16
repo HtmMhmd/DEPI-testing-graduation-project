@@ -1,4 +1,4 @@
-﻿package com.swaglabs.tests;
+package com.swaglabs.tests;
 
 import com.swaglabs.pages.CartPage;
 import com.swaglabs.pages.CheckoutPage;

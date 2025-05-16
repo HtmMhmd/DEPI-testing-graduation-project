@@ -1,0 +1,16 @@
+2025-05-17 01:31:11.658 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:31:11.658 [main] INFO  com.swaglabs.user.ERROR_USER - START TEST: Error User Login & Cart Functionality Test for error_user
+2025-05-17 01:31:11.658 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:31:11.659 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Logging in as error user
+2025-05-17 01:31:11.959 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Verifying redirect to products page
+2025-05-17 01:31:12.043 [main] INFO  com.swaglabs.user.ERROR_USER - On products page: true
+2025-05-17 01:31:12.043 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Adding product to cart: Sauce Labs Backpack
+2025-05-17 01:31:12.177 [main] INFO  com.swaglabs.user.ERROR_USER - Cart count after adding product: 1
+2025-05-17 01:31:12.177 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Navigating to cart page
+2025-05-17 01:31:12.248 [main] INFO  com.swaglabs.user.ERROR_USER - STEP: Checking if product is in cart
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - Product is in cart: true
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - Product was added to cart despite being error_user
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - END TEST: Error User Login & Cart Functionality Test for error_user - PASS
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - Message: Product was found in cart
+2025-05-17 01:31:12.279 [main] INFO  com.swaglabs.user.ERROR_USER - ======================================================
